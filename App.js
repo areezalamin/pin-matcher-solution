@@ -16,12 +16,12 @@ function forRandomPin(){
 
 document.getElementById('all-number').addEventListener('click', function (event) {
 
-    const buttonInputValue = document.getElementById('for-number-value')
+    const buttonInputValue = document.getElementById('for-number-value');
     const firstInputValue = buttonInputValue.value
-    const secondInputValue = document.getElementById('for-number-value')
-    const secontButtonValue = event.target.innerText
-    secondInputValue.value = firstInputValue + secontButtonValue
-    const forLength = secondInputValue.value
+    const secondInputValue = document.getElementById('for-number-value');
+    const secontButtonValue = event.target.innerText;
+    secondInputValue.value = firstInputValue + secontButtonValue;
+    const forLength = secondInputValue.value;
     
     if(forLength.length > 4){
         secondInputValue.value ='';
@@ -30,19 +30,19 @@ document.getElementById('all-number').addEventListener('click', function (event)
 
 function forSubmit() {
     
-    const pin = document.getElementById('pin-generator-value').value
-    const numberValue = document.getElementById('for-number-value').value
+    const pin = document.getElementById('pin-generator-value').value;
+    const numberValue = document.getElementById('for-number-value').value;
     
 
     if (pin == numberValue) {
-        const matchingSuccess = document.getElementById('matching-success')
-        matchingSuccess.style.display = 'block'
-        matchingFailed = ''
+        const matchingSuccess = document.getElementById('matching-success');
+        matchingSuccess.style.display = 'block';
+        matchingFailed = '';
     }
     else{
-        const matchingFailed = document.getElementById('matching-failed')
-        matchingFailed.style.display = 'block'
-        matchingSuccess = ''
+        const matchingFailed = document.getElementById('matching-failed');
+        matchingFailed.style.display = 'block';
+        matchingSuccess = '';
     }
 
 }
