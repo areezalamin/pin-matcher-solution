@@ -30,9 +30,19 @@ document.getElementById('all-number').addEventListener('click', function (event)
 
 function forSubmit() {
     
-    if (inputValue.value == secondInputValue.value) {
+    const pin = document.getElementById('pin-generator-value').value
+    const numberValue = document.getElementById('for-number-value').value
+    
 
-        console.log('who are you')
+    if (pin == numberValue) {
+        const matchingSuccess = document.getElementById('matching-success')
+        matchingSuccess.style.display = 'block'
+        matchingFailed = ''
+    }
+    else{
+        const matchingFailed = document.getElementById('matching-failed')
+        matchingFailed.style.display = 'block'
+        matchingSuccess = ''
     }
 
 }
